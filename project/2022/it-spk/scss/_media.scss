@@ -1,0 +1,364 @@
+#burger {
+    display: none;
+}
+
+@media screen and (max-width: $burger-breakpoint) {
+
+    .locked {
+        overflow: hidden;
+    }
+
+    #burger {
+        display: block;
+
+        &-btn {
+            z-index: 5;
+            display: block;
+            width: 30px;
+            height: 18px;
+            cursor: pointer;
+            position: absolute;
+            top: 42px;
+            right: 24px;
+
+            // Button icon
+            span,
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                height: 10%;
+                width: 100%;
+                transition: .3s ease-in-out;
+                background-color: #fff;
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            span {
+                top: 50%;
+                transform: scale(1) translate(0, -50%);
+            }
+        }
+
+        &-menu {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff; // Menu bg color 
+
+            transition: all .3s ease-in-out;
+            transform: translate(100%, 0); // < -100% | 100% >
+
+            .wrapper {
+                max-width: 300px;
+                width: 100%;
+                margin: 0 auto;
+                padding: 32px 0;
+                height: calc(100% - 60px);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .itspk-phones {
+                text-align: left;
+                margin: 24px 0;
+
+                b {
+                    padding: 0 8px 0 0;
+                }
+            }
+
+            .burger-menu-items {
+                color: $dark;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 24px;
+                text-align: center;
+
+                .header-menu-item {
+                    margin: 12px 0;
+                }
+            }
+        }
+
+        .bMenu-opened {
+            transform: translate(0, 0);
+        }
+
+        .send-button {
+            margin: 0 auto;
+
+            span,
+            img {
+                position: relative;
+                top: 10px;
+            }
+
+            img {
+                top: 13px;
+            }
+        }
+    }
+
+    .buttonTransform {
+        span {
+            transform: scale(0) translate(0, -50%) !important;
+        }
+
+        &::before {
+            top: 50% !important;
+            transform: rotate(-45deg) translate(0, -50%) !important;
+            background-color: #333 !important;
+        }
+
+        &::after {
+            bottom: 50% !important;
+            transform: rotate(45deg) translate(0, 50%) !important;
+            background-color: #333 !important;
+        }
+    }
+
+    .header {
+
+        &-menu-items,
+        .itspk-phones {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .price {
+        &-blocks {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+
+        &-block {
+            &-right {
+                justify-content: center;
+                margin-bottom: 32px;
+            }
+
+            &-left {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .services {
+        &-cards {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+    }
+
+    .goal {
+        .wrapper {
+            flex-direction: column;
+
+            .text-title {
+                text-align: center;
+            }
+        }
+
+        &-left {
+            margin-bottom: 24px;
+        }
+    }
+
+    .footer {
+        &-top {
+            .wrapper {
+                flex-direction: column;
+
+                .text-heading {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 712px) {
+    .header {
+        &-main {
+            &-footer {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .itspk-sendbtn {
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .connect {
+        &-cards {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        &-card {
+            margin: 0;
+
+            &:nth-child(1) {
+                margin-right: 8px;
+                margin-bottom: 24px;
+            }
+
+            &:nth-child(2) {
+                margin-left: 8px;
+                margin-bottom: 24px;
+            }
+
+            &:nth-child(3) {
+                margin: 0;
+            }
+        }
+    }
+
+    .footer {
+        &-bottom {
+            .wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            &-left {
+                margin-bottom: 24px;
+            }
+
+            &-right {
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .about {
+        .wrapper {
+            flex-direction: column;
+
+            .text-title {
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+    .services {
+        &-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .price {
+        &-block {
+            &-right {
+                flex-wrap: wrap;
+                margin-bottom: 16px;
+
+                .card {
+                    min-width: 100%;
+
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        margin: 16px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .organization {
+        &-block {
+            flex-wrap: wrap;
+
+            p {
+                min-width: 320px;
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    margin: 24px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 432px) {
+
+    .connect,
+    .price {
+        padding: 16px;
+    }
+
+    .header {
+        &-main {
+            h1 {
+                font-size: 32px;
+                margin: 40px 0;
+            }
+        }
+    }
+
+    .wus {
+        &-blocks {
+            flex-direction: column;
+
+            p:nth-child(1) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    .connect {
+        &-cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &-card {
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-bottom: 24px;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .price {
+        &-footer {
+            flex-wrap: wrap;
+
+            .price_download-btn {
+                margin: 4px 24px 4px 0;
+            }
+        }
+    }
+}
