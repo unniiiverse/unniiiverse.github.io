@@ -1,0 +1,9 @@
+/* 
+    UVSTM-accordion
+    
+    Version: uvstm-accordion @1.1.1
+    Author: Mykhailo Unniiiverse (unniiiverse.github.io)
+    License: MIT
+*/
+
+.uvstm-accordion-trigger{display:flex;justify-content:space-between;align-items:center}.uvstm-accordion-trigger_arrow{transition:.2s ease-in-out all}.uvstm-accordion-trigger--open .uvstm-accordion-trigger_arrow{transform:rotate(180deg)}.uvstm-accordion-content{max-height:0;opacity:0;visibility:hidden;transition:.2s ease-in-out all}.uvstm-accordion-content--open{opacity:1;visibility:visible}
