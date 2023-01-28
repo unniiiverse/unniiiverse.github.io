@@ -1,0 +1,12 @@
+/*
+
+* uvstm-buger
+
+* Version: 1.0.1
+* License: MIT
+* Author: Mykhailo Unniiiverse (unniiiverse.github.io)
+* GitRepo: https://github.com/unniiiverse/uvstm-buger
+
+*/
+
+.uvstm-burger_trigger{position:relative;z-index:1000}.uvstm-burger-trigger_arrow--top,.uvstm-burger-trigger_arrow--center,.uvstm-burger-trigger_arrow--bottom{transition:.2s ease-in-out}.uvstm-burger-menu{display:block;position:absolute;top:0;right:0;width:100%;height:100%;z-index:999;opacity:0;visibility:hidden;transition:.3s ease-in-out}.uvstm-burger-menu--open .uvstm-burger-menu{opacity:1;visibility:visible;transform:translate(0, 0)}.uvstm-burger-menu--open .uvstm-burger-trigger_arrow--top{transform:rotate(45deg) translate(6px, -10px)}.uvstm-burger-menu--open .uvstm-burger-trigger_arrow--center{opacity:0}.uvstm-burger-menu--open .uvstm-burger-trigger_arrow--bottom{transform:rotate(-45deg) translate(-20px, -3px)}
