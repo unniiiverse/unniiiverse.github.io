@@ -1,0 +1,112 @@
+//* Common styles.
+.t {
+  transition: .2s ease-in-out color;
+  
+  &-h {
+    font-weight: 800;
+    line-height: 130%;
+
+    &-hero {
+      font-size: rem(50);
+    }
+
+    &-1 {
+      letter-spacing: -1%;
+      font-size: rem(40);
+    }
+
+    &-2 {
+      font-size: rem(30);
+    }
+
+    &-3 {
+      font-size: rem(24);
+    }
+  }
+
+  &-t {
+    &-subtitle {
+      color: $c-accent;
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      font-size: rem(18);
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+  }
+
+  &-b {
+    line-height: 155%;
+
+    &-l {
+      font-size: rem(18);
+    }
+
+    &-m {
+      font-size: rem(16);
+    }
+
+    &-s {
+      font-size: rem(14);
+    }
+  }
+
+  &-btn {
+    font-size: rem(18);
+    font-weight: 700;
+    color: $c-white;
+
+    &-l {
+      line-height: 150%;
+      letter-spacing: -2%;
+    }
+  }
+}
+
+.btn {
+  background-color: $c-cta;
+  border-radius: 10px;
+  flex-shrink: 0;
+  transform: translateY(0);
+  transition: .2s ease-in-out transform;
+
+  &:hover:not(.btn-sm) {
+    transform: translateY(-2px);
+  }
+
+  &-sm {
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+
+    p {
+      color: $c-cta;
+      font-size: rem(18);
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+
+    div {
+      padding: 6px 9px;
+      transform: translateX(0);
+      transition: .2s ease-in-out transform;
+    }
+
+    &:hover {
+      div {
+        transform: translateX(2px);
+      }
+    }
+  }
+
+  &-s {
+    padding: 16px 55px;
+  }
+
+  &-l {
+    padding: 16px 100px;
+  }
+}

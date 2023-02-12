@@ -1,0 +1,120 @@
+//! ==========================================================
+//! PROJECT STYLES CONFIG. PLEASE, DO NOT PLACE YOUR CODE HERE
+//! ==========================================================
+
+//* ROOT VARIABLES
+$defaultFontSize: 16px;
+
+@import url('https://unniiiverse.github.io/cdn/style/normalize.min.css');
+@import './base/fonts';
+// Google fotns import or other font cdn
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Inter:wght@400;500;600;700;800&display=swap');
+
+@import './base/mixins';
+@import './base/vars';
+@import './base/common';
+
+
+
+//* Default font settings.
+$fontSize: rem(12);
+$fontWeight: 400;
+$fontColor: $c-9;
+$fontFamily: 'Inter', system-ui;
+
+//* Wrapper settings.
+$wrapperMaxWidth: 1220px;
+$wrapperMinWidth: 340px;
+$wrapperSidePadding: 16px;
+
+
+
+//* UVST classes.
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+b,
+strong,
+i,
+sub,
+sup,
+a,
+input,
+input::placeholder,
+textarea {
+  font-size: $fontSize;
+  font-family: $fontFamily;
+  font-weight: $fontWeight;
+  color: $fontColor;
+  text-decoration-skip-ink: auto;
+}
+
+input {
+  font-family: $fontFamily;
+  border: 1px solid rgba($color: $fontColor, $alpha: .4);
+  outline: none;
+
+  &::placeholder {
+    font-family: $fontFamily;
+    color: rgba($color: $fontColor, $alpha: .4);
+  }
+}
+
+i {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+}
+
+.wrapper {
+  max-width: $wrapperMaxWidth;
+  min-width: calc($wrapperMinWidth + calc($wrapperSidePadding * 2));
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $wrapperSidePadding;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.g {
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  &-col {
+    display: flex;
+    flex: 1 0 0;
+    min-width: 300px;
+  }
+}
+
+//* Import common pages/components styles
+@import './common/header';
+@import './common/footer';

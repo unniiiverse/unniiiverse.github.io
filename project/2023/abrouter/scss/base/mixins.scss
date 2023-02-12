@@ -1,0 +1,11 @@
+@use 'sass:math';
+
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($defaultFontSize)}rem;
+}
+
+//* Your scss mixins.
