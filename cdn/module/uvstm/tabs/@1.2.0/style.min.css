@@ -1,0 +1,9 @@
+/* 
+    UVSTM-tabs
+    
+    Version: uvstm-tabs @1.2.0
+    Author: Mykhailo Unniiiverse (unniiiverse.github.io)
+    License: MIT
+*/
+
+.uvstm-tabs-control_item{cursor:pointer}.uvstm-tabs-content{position:relative;width:100%;height:0;transition:.2s ease-in-out}.uvstm-tabs-content_item{display:block;position:absolute;top:0;left:0;z-index:-99;transition:.3s ease-in-out;opacity:0}.uvstm-tabs-content_item--active{position:relative;z-index:1;opacity:1}
