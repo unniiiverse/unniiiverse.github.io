@@ -1,10 +1,19 @@
-![COVER](./cover.png)
 # ABRouter
-Making A/B tests is challenging. We make it easy
+![PREVIEW](cover.png)
 
-Type: Landing page <br>
-Terms: 2 days <br>
+Making A/B tests is challenging. We make it easy
 
 ## [VISIT](https://unniiiverse.github.io/project/2023/abrouter/)
 
-unniiiverse 2023
+Type: Landing page, uncomercial. <br>
+Language: ENG. <br>
+Completed in: 2. <br>
+Pages: 1. <br>
+
+Status: COMPLETED <br>
+
+## Features
++ Adaptive for mobile devices (exclude burger menu).
++ Appearance content animations.
+
+unniiiverse © 2023
