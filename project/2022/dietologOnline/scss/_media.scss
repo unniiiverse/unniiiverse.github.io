@@ -1,0 +1,178 @@
+@media screen and (max-width: 1200px) {
+    .rate {
+        &-cards {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 1074px) {
+    .how-cards {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    .how-card {
+        margin: 15px !important;
+    }
+
+    .addiction {
+        &-block {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        &_right {
+            margin: 0;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    #header nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .generalDiet {
+        &-blocks {
+            flex-direction: column;
+            min-width: 300px;
+            max-width: 500px;
+        }
+
+        &-block {
+            &-right {
+                min-width: 300px;
+            }
+        }
+    }
+
+    .getMore {
+        &-blocks {
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+        }
+
+        &-block {
+            &-left {
+                .text,
+                .text-heading {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #header-content-block {
+        flex-direction: column-reverse;
+        margin-bottom: 80px;
+
+        img {
+            position: relative;
+            left: -60px;
+        }
+    }
+
+    .trouble {
+        padding: 50px 0;
+
+        &-cards {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .result {
+        &-blocks {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        &-block-right {
+            margin-left: 0;
+
+            .text-heading {
+                margin-top: 32px;
+            }
+        }
+    }
+
+    .trouble-card {
+        &:nth-child(1n) {
+            margin-left: 15px;
+        }
+
+        &:nth-child(3n) {
+            margin-right: 15px;
+        }
+    }
+
+    .how-cards {
+        grid-template-columns: 1fr !important;
+    }
+
+    .rate {
+        &-cards {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .review {
+        &-cards {
+            grid-template-columns: 1fr;
+        }
+
+        &-card {
+            &:nth-child(1) {
+                margin-left: 0;
+                margin-top: 40px;
+            }
+
+            &:nth-child(2) {
+                margin-left: 0;
+                margin-top: 80px;
+            }
+
+            min-width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .trouble {
+        &-cards {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .rate {
+        &-card {
+            min-width: 300px;
+
+            &:nth-child(1) {
+                margin-left: 15px;
+            }
+
+            &:nth-child(3) {
+                margin-right: 15px;
+            }
+        }
+    }
+    
+    .generalDiet {
+        &-block {
+            &-left {
+                img {
+                    min-width: 300px;
+                }
+            }
+        }
+        &-cards {
+            grid-template-columns: 1fr
+        }
+    }
+}
