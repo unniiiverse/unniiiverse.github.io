@@ -1,0 +1,5 @@
+.uv-card { min-width: 300px; text-align: center; }
+
+.uv-card-container-flex { display: flex; justify-content: space-between; flex-wrap: wrap; }
+
+.uv-card-container-flex .uv-card { flex: 1 0 0%; margin: 24px; }
