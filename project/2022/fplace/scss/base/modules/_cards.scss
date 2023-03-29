@@ -1,0 +1,23 @@
+.uv {
+    &-cards {
+        &-flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        &-grid {
+            display: grid;
+            align-items: start;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    &-card {
+        flex: 1 0 0;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+}

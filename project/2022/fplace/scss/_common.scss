@@ -1,0 +1,183 @@
+$dark-1: #2E2E2E;
+$dark-2: #3F3232;
+$orange: #FF9401;
+$orange-light: rgba($color: $orange, $alpha: .5);
+$gilroy: 'Gilroy',
+sans-serif;
+$circularStd: 'Circular Std',
+sans-serif;
+
+.text {
+    &-hero {
+        span {
+            font-family: $gilroy;
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(24px);
+            line-height: rem(30px);
+            color: $orange;
+        }
+
+        h1 {
+            font-family: $gilroy;
+            font-style: normal;
+            font-weight: 800;
+            font-size: rem(96px);
+            line-height: rem(108px);
+        }
+    }
+
+    &-heading {
+        span {
+            font-family: $gilroy;
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(24px);
+            line-height: rem(30px);
+            color: $orange;
+        }
+
+        h2 {
+            font-family: $gilroy;
+            font-style: normal;
+            font-weight: 700;
+            font-size: rem(52px);
+            line-height: rem(60px);
+            color: $dark-1;
+        }
+    }
+
+    &-headerDescr {
+        font-family: $circularStd;
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(20px);
+        line-height: rem(32px);
+    }
+
+    &-title {
+        font-family: $gilroy;
+        font-style: normal;
+        font-weight: 700;
+        font-size: rem(24px);
+        line-height: 30px;
+        color: $dark-1;
+    }
+
+    font-family: $circularStd;
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(18px);
+    line-height: rem(29px);
+    color: $dark-2;
+}
+
+.button {
+    &-primary {
+        display: inline-block;
+        background-color: $orange;
+        transition: .3s ease-in-out background-color;
+        border-radius: 64px;
+        filter: drop-shadow(0px 20px 40px rgba(255, 148, 1, 0.2));
+        max-width: 250px;
+
+        p {
+            transition: .3s ease-in-out color;
+            font-family: 'Circular Std', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: rem(20px);
+            line-height: rem(30px);
+            color: #fff;
+            padding: 16px 30px;
+        }
+
+        &:hover {
+            background-color: $orange-light;
+
+            p {
+                color: $dark-1;
+            }
+        }
+    }
+}
+
+.extra {
+    transition: .3s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    z-index: -1;
+
+    &-1 {
+        width: 86px;
+        height: 95px;
+        top: 95px;
+        left: 80%;
+    }
+
+    &-2 {
+        width: 267.12px;
+        height: 178.08px;
+        left: -86px;
+    }
+
+    &-3 {
+        right: -80px;
+        top: -80px;
+    }
+
+    &-6 {
+        width: 251px;
+        height: 177px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -7px;
+        z-index: 4;
+    }
+}
+
+.uv {
+    &-burger {
+        &_svg {
+            rect {
+                width: 20px;
+                height: 3px;
+                fill: $dark-1;
+            }
+
+            &--center {
+                width: 16px !important;
+                transform: translateX(4px);
+            }
+        }
+
+        &_menu {
+            background-color: #fff;
+        }
+
+        &--active {
+            .extra {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.fplace {
+    &-logo {
+        display: flex;
+        align-items: center;
+        z-index: 11;
+
+        span {
+            font-family: 'Playfair Display', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: rem(22px);
+            line-height: rem(30px);
+            margin-left: rem(6px);
+        }
+    }
+}

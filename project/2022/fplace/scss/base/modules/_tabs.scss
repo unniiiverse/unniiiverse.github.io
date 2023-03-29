@@ -1,0 +1,12 @@
+.uv {
+    &-tabs {
+        &-list {
+            display: flex;
+            align-items: center;
+        }
+
+        &_content:not(.uv-tabs_content-active) {
+            display: none;
+        }
+    }
+}

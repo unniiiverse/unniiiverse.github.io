@@ -1,0 +1,93 @@
+@import 'base/_normalize';
+@import 'base/_mixins';
+@import 'base/_fonts';
+
+//* === КОНФИГУРАЦИЯ
+
+// Темы страницы //* Настройки темы описаны в js/modules.js. Стандартная тема - белая (light), это можно изменить изменив класс html тега. Что бы отключить изменение темы, необходимо в html тег добавить аттрибут data-themeChange-disabled. DATA-Аттрибут кнопки изменения темы - data-theme-trigger
+//* Настройки LIGHT Темы
+$themeLight: #e3e3e3;
+$themeLight-primary: #000;
+
+//* Настройки DARK Темы
+$themeDark: #272727;
+$themeDark-primary: #fff;
+
+// Шрифты
+$htmlDefaultFontSize: 14px;
+$fontSize: rem(16px);
+$fontColor: #000;
+$fontFamily: 'Circular Std', sans-serif;
+$fontWeight: 400;
+
+// Контейнер
+$wrapperMinWidth: 320px;
+$wrapperMaxWidth: 1170px;
+$wrapperPadding: rem(24px); //28px (по 14 справа и слева)
+
+//* === МОДУЛИ. Все модули описаны в modules.md в корне проекта.
+// КОНФИГУРАЦИЯ МОДУЛЕЙ. //! ПРИ ПОДКЛЮЧЕНИИ НЕОБХОДИМО ТАК ЖЕ ВКЛЮЧИТЬ ЭТОТ МОДУЛЬ В js/modules.js
+
+@import 'base/modules/_cards'; // FLEX и GRID Карточки.
+@import 'base/modules/_burger'; // Бургер меню.
+// @import 'base/modules/_tabs'; // Табы.
+// @import 'base/modules/_accordion'; // Аккордеон. //! Ширину _control в модуле аккордеона необходимо указывать как width: calc(100% - calc(<padding как в _control и _content> * 2));. Это связано с багом content-box.
+// @import 'base/modules/_preloader'; // Прелоадер.
+// @import 'base/modules/_popup'; // Попапы.
+
+
+
+//* === HTML
+html {
+    transition: .3s ease-in-out all;
+
+    & * {
+        color: $fontColor;
+        font-size: $fontSize;
+        font-family: $fontFamily;
+        font-weight: $fontWeight;
+    }
+}
+
+.theme {
+    &-light {
+        background: $themeLight;
+
+        //* Настройки цветов страницы.
+        .text {
+            color: $themeLight-primary;
+        }
+    }
+
+    &-dark {
+        background: $themeDark;
+
+        //* Настройки цветов страницы.
+        .text {
+            color: $themeDark-primary;
+        }
+    }
+}
+
+.wrapper {
+    max-width: $wrapperMaxWidth;
+    width: 100%;
+    min-width: $wrapperMinWidth;
+    height: auto;
+
+    padding: 0 $wrapperPadding;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    object-fit: cover !important;
+}
+
+@import '_common';
+@import '_header';
+@import '_page-main';
+@import '_footer';

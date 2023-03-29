@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+$UVAccordionPadding: 8px;
+
+.uv {
+    &-accordion {
+        width: 400px;
+        min-width: 280px;
+        margin-bottom: 8px;
+        border: 1px solid #888;
+
+        &_control {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: $UVAccordionPadding;
+            width: calc(100% - calc($UVAccordionPadding * 2));
+            cursor: pointer;
+        }
+
+        &_icon {
+            transition: .1s ease-in-out transform;
+        }
+
+        &_content {
+            padding: 0 $UVAccordionPadding;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            will-change: max-height;
+            transition: .2s ease-in-out all;
+        }
+
+        &-expanded {
+            .uv-accordion_icon {
+                transform: rotate(45deg);
+            }
+
+            .uv-accordion_content {
+                padding: 8px;
+                opacity: 1;
+            }
+        }
+    }
+}

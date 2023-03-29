@@ -1,0 +1,149 @@
+.aboutus {
+    background: linear-gradient(180deg, rgba(255, 148, 1, 0.05) 0%, rgba(255, 237, 211, 0) 100%);
+
+    .wrapper {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &_img {
+        &--1 {
+            position: absolute;
+            left: -121.7px;
+            top: -71px;
+            bottom: 0;
+            z-index: -1;
+            transition: .3s ease-in-out;
+        }
+    }
+
+    &_rightBlock {
+        max-width: 426px;
+        margin: rem(142px) 0;
+
+        .text-heading {
+            h2 {
+                margin: 24px 0;
+            }
+        }
+
+        .text-headerDescr {
+            margin-bottom: 48px;
+        }
+    }
+}
+
+.features {
+    margin-bottom: 117px;
+
+    .text-heading {
+        text-align: center;
+        margin-bottom: 43px;
+    }
+
+    .uv-cards-flex {
+        max-width: 971px;
+        margin: 0 auto;
+        column-gap: 118px;
+        row-gap: 40px;
+    }
+
+    .uv-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-width: 160px;
+
+        .text-title {
+            margin-bottom: 19px;
+        }
+    }
+
+    &-card_img {
+        margin-bottom: 25px;
+    }
+}
+
+.recepies {
+    background: linear-gradient(180deg, rgba(255, 148, 1, 0.05) 0%, rgba(255, 237, 211, 0) 100%);
+    padding: 90px 0 20px 0;
+    display: flex;
+    align-items: center;
+
+    .text-heading {
+        text-align: center;
+        margin-bottom: 73px;
+    }
+
+    .uv-cards-flex {
+        filter: drop-shadow(0px 40px 80px rgba(255, 148, 1, 0.15));
+        gap: 54px;
+        justify-content: center;
+        margin-bottom: 88px;
+    }
+
+    .uv-card {
+        padding: 12px;
+        background-color: #fff;
+        max-width: 354px;
+        min-width: 240px;
+    }
+
+    &-card {
+        border-radius: 8px;
+
+        &_img {
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        &_top,
+        &_bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &_top {
+            margin-bottom: 32px;
+        }
+
+        &_rate {
+            color: #818181;
+            display: flex;
+            align-items: center;
+
+            &::before {
+                padding-right: 4px;
+            }
+        }
+
+        &_button {
+            background-color: #F0F0F0;
+            border-radius: 15px;
+
+            p {
+                color: #696969;
+                padding: 5px 16px;
+                text-transform: uppercase;
+            }
+        }
+
+        &_price,
+        &_cost {
+            color: $orange;
+            font-size: 18px;
+            font-weight: 700;
+            font-style: italic;
+        }
+    }
+}
+
+@media screen and (max-width: 1055px) {
+    .aboutus_img--1 {
+        opacity: .4;
+    }
+}

@@ -1,0 +1,93 @@
+.uv {
+    &-burger {
+        &_button {
+            z-index: 10;
+            position: relative;
+        }
+
+        &_svg {
+            rect {
+                fill: #000;
+                height: 3px;
+                width: 32px;
+                transition: .3s ease-in-out;
+            }
+        }
+
+        &_menu {
+            position: absolute;
+            top: -10vw;
+            right: -20vw;
+            display: block;
+            width: 200vw;
+            height: 120vh;
+            background-color: yellow;
+            transition: .3s ease-in-out;
+            z-index: 9;
+            overflow: hidden;
+
+            opacity: 0;
+        }
+
+        &--mode {
+            &_top {
+                .uv-burger_menu {
+                    transform: translateY(-100%);
+                }
+            }
+
+            &_bottom {
+                .uv-burger_menu {
+                    transform: translateY(100%);
+                }
+            }
+
+            &_right {
+                .uv-burger_menu {
+                    transform: translatex(100%);
+                }
+            }
+
+            &_left {
+                .uv-burger_menu {
+                    transform: translateX(-100%);
+                }
+            }
+        }
+
+        &--active {
+            .uv-burger {
+                &_menu {
+                    opacity: 1;
+                    transform: translate(0, 0);
+                }
+
+                &_svg {
+                    &--top {
+                        transform: rotate(45deg) translate(3px, -3px);
+                    }
+
+                    &--center {
+                        opacity: 0;
+                    }
+
+                    &--bottom {
+                        transform: rotate(-45deg) translate(-9px, -3px);
+                    }
+                }
+            }
+
+            body {
+                overflow: hidden;
+            }
+        }
+    }
+
+    &-menu {
+        &_wrapper {
+            min-width: 280px;
+            max-width: 600px;
+            padding: 24px;
+        }
+    }
+}
