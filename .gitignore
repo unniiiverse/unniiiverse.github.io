@@ -1,1 +1,2 @@
-project/2022/**/*.git
+project/**/*.git
+.react
