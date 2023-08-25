@@ -10,17 +10,8 @@
 
 <body>
 
-  <h1>Молодець, тримай печиво</h1>
-  <img src="https://www.mayheminthekitchen.com/wp-content/uploads/2015/05/chocolate-cookie-square.jpg" alt="">
-  <h2>А міг ти попасти <a href="#">сюда</a></h2>
-
   <script>
     const pill = location.href.split('=')[1];
-    const random = ['https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley',
-      'https://unniiiverse.github.io/contacts', 'https://random.dog/',
-      'https://i.pinimg.com/564x/f2/fc/bb/f2fcbb8143da2927a4c970dddfb30a9c.jpg',
-      'https://send.monobank.ua/jar/6GiMp6tQqN', 'https://unniiiverse.github.io/sup/pill=omg'
-    ]
 
     function randChance(cases) {
       let random = Math.floor(Math.random() * 100);
@@ -38,17 +29,11 @@
     if (pill === 'red') {
       const redRand = [
         'https://unniiiverse.github.io/contacts',
-        'https://unniiiverse.github.io/sup/pill=omg',
         'https://send.monobank.ua/jar/6GiMp6tQqN',
         'https://random.dog/'
       ]
 
-      location.href = redRand[randChance({
-        10: 2, 
-        30: 1, 
-        80: 0,
-        100: 3,
-      })]
+      location.href = redRand[randInt(0, redRand.length -1)]
     } else if (pill === 'blue') {
       const blueRand = [
         'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley',
@@ -56,14 +41,7 @@
         'https://random.dog/'
       ]
 
-      location.href = blueRand[randChance({
-        10: 1, 
-        90: 0, 
-        100: 2
-      })]
-    } else {
-      const rand = random[randInt(0, random.length - 1)];
-      document.querySelector('a').setAttribute('href', rand)
+      location.href = blueRand[randInt(0, blueRand.length - 1)]
     }
   </script>
 
